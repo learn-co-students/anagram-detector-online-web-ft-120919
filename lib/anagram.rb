@@ -1,14 +1,14 @@
 # Your code goes here!
 class Anagram
-  attr_accessor :word 
-  
+
+  attr_accessor :name
+
   def initialize(word)
-    @word = word 
-  end
-  
-  def match(words_array)
-    words_array.select do |element|
-      @word.split("").sort == element.split("").sort 
-    end
-  end
-end
+    @name = word 
+  end   
+
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
